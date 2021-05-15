@@ -21,6 +21,16 @@ export const Container = styled.div`
   right: 0;
   bottom: 0;
   border-radius: 30px 30px 0px 0px;
+
+  @media (max-width: 500px) {
+    padding: 20px;
+    height: 150px;
+    flex-direction: column-reverse;
+  }
+
+  @media (max-width: 375px) {
+    padding: 12px;
+  }
 `;
 
 export const SearchInputContainer = styled.div`
@@ -28,6 +38,10 @@ export const SearchInputContainer = styled.div`
   max-width: 400px;
   height: 40px;
   position: relative;
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 
   svg {
     position: absolute;
