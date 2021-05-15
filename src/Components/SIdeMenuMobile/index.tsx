@@ -11,6 +11,7 @@ import {
   SideMenuMobileImage,
   SideMenuMobileContent,
   SideMenuMobileOption,
+  SideMenuMobileOverlay,
 } from "./styles";
 
 interface SideMenuMobileProps {
@@ -20,29 +21,32 @@ interface SideMenuMobileProps {
 
 function SideMenuMobile({ open, menuClick }: SideMenuMobileProps) {
   return (
-    <SideMenuMobileContainer open={open}>
-      <SideMenuMobileHeader>
-        <SideMenuMobileImage src={Logo} />
-      </SideMenuMobileHeader>
-      <SideMenuMobileContent>
-        <SideMenuMobileOption to="/dashboard" onClick={menuClick}>
-          <Icon icon={homeOutlined} width="20" />
-          Dashboard
-        </SideMenuMobileOption>
-        <SideMenuMobileOption to="/pacientes" onClick={menuClick}>
-          <Icon icon={productDownloadable} width="20" />
-          Pacientes
-        </SideMenuMobileOption>
-        <SideMenuMobileOption to="/testes" onClick={menuClick}>
-          <Icon icon={productDownloadable} width="20" />
-          Testes
-        </SideMenuMobileOption>
-        <SideMenuMobileOption to="/configuracoes" onClick={menuClick}>
-          <Icon icon={productDownloadable} width="20" />
-          Configurações
-        </SideMenuMobileOption>
-      </SideMenuMobileContent>
-    </SideMenuMobileContainer>
+    <>
+      <SideMenuMobileOverlay open={open} onClick={menuClick} />
+      <SideMenuMobileContainer open={open}>
+        <SideMenuMobileHeader>
+          <SideMenuMobileImage src={Logo} />
+        </SideMenuMobileHeader>
+        <SideMenuMobileContent>
+          <SideMenuMobileOption to="/dashboard" onClick={menuClick}>
+            <Icon icon={homeOutlined} width="20" />
+            Dashboard
+          </SideMenuMobileOption>
+          <SideMenuMobileOption to="/pacientes" onClick={menuClick}>
+            <Icon icon={productDownloadable} width="20" />
+            Pacientes
+          </SideMenuMobileOption>
+          <SideMenuMobileOption to="/testes" onClick={menuClick}>
+            <Icon icon={productDownloadable} width="20" />
+            Testes
+          </SideMenuMobileOption>
+          <SideMenuMobileOption to="/configuracoes" onClick={menuClick}>
+            <Icon icon={productDownloadable} width="20" />
+            Configurações
+          </SideMenuMobileOption>
+        </SideMenuMobileContent>
+      </SideMenuMobileContainer>
+    </>
   );
 }
 

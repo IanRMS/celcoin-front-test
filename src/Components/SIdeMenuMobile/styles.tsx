@@ -61,3 +61,15 @@ export const SideMenuMobileOption = styled(NavLink)`
     background-color: ${COLORS.darkBlue};
   }
 `;
+
+export const SideMenuMobileOverlay = styled.div<ContainerProps>`
+  position: fixed;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  top: -10px;
+  left: -10px;
+  transition: 0.3s ease-in-out;
+  display: ${(props) => (props.open ? "block" : "none")};
+`;
