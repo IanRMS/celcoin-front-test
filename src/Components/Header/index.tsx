@@ -21,6 +21,7 @@ import {
   SubMenuOption,
   SubMenuOptionsText,
 } from "./styles";
+import COLORS from "../../constants/colors";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,15 +48,19 @@ function Header() {
   return (
     <Container>
       <SearchInputContainer>
-        <Icon icon={searchOutlined} width={20} color="#787686" />
+        <Icon icon={searchOutlined} width={20} color={COLORS.gray} />
         <SearchInput placeholder="Busca..." />
       </SearchInputContainer>
       <HeaderRow>
         <IconButton>
-          <Icon icon={baselineSettings} width={20} color="#2C2E3D" />
+          <Icon icon={baselineSettings} width={20} color={COLORS.darkGray} />
         </IconButton>
         <IconButton hasNotification={true}>
-          <Icon icon={baselineNotifications} width={20} color="#2C2E3D" />
+          <Icon
+            icon={baselineNotifications}
+            width={20}
+            color={COLORS.darkGray}
+          />
         </IconButton>
 
         <UserContent onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -66,7 +71,7 @@ function Header() {
         </UserContent>
 
         <IconButton>
-          <Icon icon={roundApps} width={24} color="#2C2E3D" />
+          <Icon icon={roundApps} width={24} color={COLORS.darkGray} />
         </IconButton>
       </HeaderRow>
       {isMenuOpen && (
@@ -78,7 +83,7 @@ function Header() {
             <SubMenuOptionsText>Configurações</SubMenuOptionsText>
           </SubMenuOption>
           <SubMenuOption>
-            <Icon icon={logoutIcon} width={20} color="#EF0C35" />
+            <Icon icon={logoutIcon} width={20} color={COLORS.red} />
             <SubMenuOptionsText>Sair</SubMenuOptionsText>
           </SubMenuOption>
         </SubMenuContainer>

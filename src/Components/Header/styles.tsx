@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import COLORS from "../../constants/colors";
 
 interface IconButtonProps {
   hasNotification?: boolean;
@@ -12,7 +13,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 32px;
-  background-color: #fff;
+  background-color: ${COLORS.white};
   box-shadow: rgba(149, 157, 165, 0.05) 0px 8px 24px;
   position: absolute;
   top: 0;
@@ -37,8 +38,8 @@ export const SearchInputContainer = styled.div`
 
 export const SearchInput = styled.input`
   width: 100%;
-  background-color: #f5f5f5;
-  color: #787686;
+  background-color: ${COLORS.lightGray};
+  color: ${COLORS.gray};
   padding: 12.5px 45px;
   border: none;
   outline: none;
@@ -78,7 +79,7 @@ export const IconButton = styled.button<IconButtonProps>`
   margin: 10px;
 
   &:hover {
-    background-color: #eff2f9;
+    background-color: ${COLORS.lightGray};
     cursor: pointer;
   }
 
@@ -87,7 +88,7 @@ export const IconButton = styled.button<IconButtonProps>`
     width: 6px;
     height: 6px;
     border-radius: 3px;
-    background: #ef0c35;
+    background: ${COLORS.red};
     display: ${(props) => (props.hasNotification ? "block" : "none")};
     position: absolute;
     top: 5px;
@@ -96,7 +97,7 @@ export const IconButton = styled.button<IconButtonProps>`
 `;
 
 export const UserContent = styled.div`
-  background-color: #eff2f9;
+  background-color: ${COLORS.lightGray};
   border-radius: 40px;
   padding: 8px;
   display: flex;
@@ -120,12 +121,12 @@ export const UserContentImage = styled.img`
 
 export const UserContextText = styled.span`
   font-weight: 400;
-  color: #787686;
+  color: ${COLORS.gray};
   margin: 0px 15px;
 
   strong {
     font-weight: 600;
-    color: #303b5b;
+    color: ${COLORS.darkBlue};
   }
 `;
 
@@ -136,7 +137,7 @@ export const SubMenuContainer = styled.div`
   right: 90px;
   border-radius: 8px;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: ${COLORS.white};
 
   button:nth-child(2) {
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -163,7 +164,7 @@ export const SubMenuOption = styled.button`
 `;
 
 export const SubMenuOptionsText = styled.span`
-  color: #303b5a;
+  color: ${COLORS.darkBlue};
   font-weight: 700;
   font-size: 12px;
   line-height: 18px;

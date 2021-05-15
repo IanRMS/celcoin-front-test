@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import COLORS from "../../constants/colors";
 
 export const SideMenuContainer = styled.div`
   width: 250px;
@@ -34,7 +35,7 @@ export const SideMenuOption = styled(NavLink)`
   align-items: center;
   padding-left: 24px;
   font-size: 16px;
-  color: #fff;
+  color: ${COLORS.white};
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 1px;
@@ -50,8 +51,8 @@ export const SideMenuOption = styled(NavLink)`
 
   &.active {
     font-weight: 600;
-    color: #303b5b;
-    background-color: #eff2f9;
+    color: ${COLORS.darkBlue};
+    background-color: ${COLORS.lightGray};
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 `;
