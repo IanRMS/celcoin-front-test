@@ -127,3 +127,39 @@ export const UserContextText = styled.span`
     color: #303b5b;
   }
 `;
+
+export const SubMenuContainer = styled.div`
+  position: absolute;
+  min-width: 160px;
+  top: 72px;
+  right: 90px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+
+  button:nth-child(2) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+`;
+
+export const SubMenuOption = styled.button`
+  width: 100%;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  background-color: transparent;
+  transition: 0.3s ease-out;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+`;
+
+export const SubMenuOptionsText = styled.span`
+  color: #303b5a;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+`;

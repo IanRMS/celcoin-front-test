@@ -19,8 +19,12 @@ input, button {
   outline: none;
 }
 
-input {
+input, button{
   font-family: Poppins, sans-serif;
+}
+
+button {
+  cursor: pointer;
 }
 `;
 
