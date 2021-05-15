@@ -16,6 +16,11 @@ export const SideMenuMobileContainer = styled.div<ContainerProps>`
   z-index: 10;
   top: -10px;
   transition: 0.3s ease-in-out;
+
+  @media (min-width: 676px) {
+    display: none;
+    visibility: hidden;
+  }
 `;
 
 export const SideMenuMobileHeader = styled.div`

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@iconify-icons/ant-design": "^1.1.0",
+    "@iconify-icons/bx": "^1.1.0",
     "@iconify-icons/gridicons": "^1.1.1",
     "@iconify-icons/heroicons-outline": "^1.1.2",
     "@iconify-icons/ic": "^1.1.4",

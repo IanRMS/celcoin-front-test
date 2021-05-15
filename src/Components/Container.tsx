@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   min-height: 100vh;
   background-image: url(${Background});
   padding: 40px;
+  background-size: cover;
 
   @media (max-width: 1024px) {
     padding: 20px;
