@@ -14,6 +14,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+input, button {
+  border: none;
+  outline: none;
+}
+
 input {
   font-family: Poppins, sans-serif;
 }
