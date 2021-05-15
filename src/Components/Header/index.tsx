@@ -4,6 +4,7 @@ import searchOutlined from "@iconify-icons/ant-design/search-outlined";
 import baselineSettings from "@iconify-icons/ic/baseline-settings";
 import baselineNotifications from "@iconify-icons/ic/baseline-notifications";
 import roundApps from "@iconify-icons/ic/round-apps";
+import logoutIcon from "@iconify-icons/heroicons-outline/logout";
 
 import UserImage from "../../assets/images/user.jpg";
 
@@ -22,7 +23,7 @@ import {
 } from "./styles";
 
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const submenu = useRef<HTMLDivElement>(null);
 
@@ -77,6 +78,7 @@ function Header() {
             <SubMenuOptionsText>Configurações</SubMenuOptionsText>
           </SubMenuOption>
           <SubMenuOption>
+            <Icon icon={logoutIcon} width={20} color="#EF0C35" />
             <SubMenuOptionsText>Sair</SubMenuOptionsText>
           </SubMenuOption>
         </SubMenuContainer>

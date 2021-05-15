@@ -104,6 +104,7 @@ export const UserContent = styled.div`
   margin: 10px;
   outline: none;
   transition: 0.3s ease-in-out;
+  user-select: none;
 
   &:hover {
     cursor: pointer;
@@ -151,6 +152,10 @@ export const SubMenuOption = styled.button`
   padding-left: 10px;
   background-color: transparent;
   transition: 0.3s ease-out;
+
+  svg {
+    margin-right: 8px;
+  }
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.02);
