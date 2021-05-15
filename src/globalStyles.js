@@ -13,6 +13,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+input {
+  font-family: Poppins, sans-serif;
+}
 `;
 
 export default GlobalStyle;

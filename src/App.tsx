@@ -1,5 +1,7 @@
 import React from "react";
-import { Container } from "./Components/Container";
+import CardContainer from "./Components/CardContainer";
+import Container from "./Components/Container";
+import Header from "./Components/Header";
 import GlobalStyle from "./globalStyles";
 
 function App() {
@@ -7,9 +9,9 @@ function App() {
     <>
       <GlobalStyle />
       <Container>
-        <>
-          <span>BORA</span>
-        </>
+        <CardContainer>
+          <Header />
+        </CardContainer>
       </Container>
     </>
   );
