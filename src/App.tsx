@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 import CardContainer from "./Components/CardContainer";
 import Container from "./Components/Container";
