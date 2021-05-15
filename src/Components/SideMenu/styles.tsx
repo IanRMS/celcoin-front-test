@@ -10,6 +10,13 @@ export const SideMenuContainer = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     flex-direction: row;
+    align-items: center;
+    height: 70px;
+    padding: 0px 10px;
+  }
+
+  @media (max-width: 675px) {
+    justify-content: space-between;
   }
 `;
 
@@ -19,6 +26,11 @@ export const SideMenuHeader = styled.div`
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   height: 88px;
   padding-left: 12px;
+
+  @media (max-width: 768px) {
+    border: none;
+    padding: 0px;
+  }
 `;
 
 export const SideMenuHeaderImage = styled.img`
@@ -27,6 +39,18 @@ export const SideMenuHeaderImage = styled.img`
 
 export const SideMenuContent = styled.div`
   margin-top: 16px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+
+  @media (max-width: 675px) {
+    display: none;
+    visibility: hidden;
+  }
 `;
 
 export const SideMenuOption = styled(NavLink)`
@@ -52,7 +76,31 @@ export const SideMenuOption = styled(NavLink)`
   &.active {
     font-weight: 600;
     color: ${COLORS.darkBlue};
-    background-color: ${COLORS.lightGray};
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    @media (min-width: 769px) {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      background-color: ${COLORS.lightGray};
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin: 0;
+    /* padding: 0; */
+    svg {
+      display: none;
+    }
+  }
+`;
+
+export const MenuButton = styled.button`
+  width: 40px;
+  height: 40px;
+  display: none;
+  visibility: hidden;
+  background: transparent;
+
+  @media (max-width: 675px) {
+    display: block;
+    visibility: visible;
   }
 `;

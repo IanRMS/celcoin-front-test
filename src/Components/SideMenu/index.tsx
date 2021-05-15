@@ -1,6 +1,7 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import homeOutlined from "@iconify-icons/ant-design/home-outlined";
+import menuOutlined from "@iconify-icons/ant-design/menu-outlined";
 import productDownloadable from "@iconify-icons/gridicons/product-downloadable";
 
 import Logo from "../../assets/images/logo.png";
@@ -11,9 +12,15 @@ import {
   SideMenuHeaderImage,
   SideMenuContent,
   SideMenuOption,
+  MenuButton,
 } from "./styles";
+import COLORS from "../../constants/colors";
 
-function SideMenu() {
+interface SideMenuProps {
+  menuClick: () => void;
+}
+
+function SideMenu({ menuClick }: SideMenuProps) {
   return (
     <SideMenuContainer>
       <SideMenuHeader>
@@ -37,6 +44,9 @@ function SideMenu() {
           Configurações
         </SideMenuOption>
       </SideMenuContent>
+      <MenuButton onClick={menuClick}>
+        <Icon icon={menuOutlined} color={COLORS.white} width="40" />
+      </MenuButton>
     </SideMenuContainer>
   );
 }

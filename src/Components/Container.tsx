@@ -7,6 +7,18 @@ const Wrapper = styled.div`
   min-height: 100vh;
   background-image: url(${Background});
   padding: 40px;
+
+  @media (max-width: 1024px) {
+    padding: 20px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+
+  @media (max-width: 425px) {
+    padding: 0;
+  }
 `;
 
 interface ContainerProps {
