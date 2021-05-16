@@ -14,7 +14,10 @@ import {
   AllPacientsListInfo,
   AllPacientsCardHeader,
   IconButton,
+  PacientsListContent,
 } from "./styles";
+import PacientsListData from "../../data/pacientsListData";
+import PacientDataCard from "../../Components/PacientDataCard";
 
 const RenderUpdateList = () => (
   <>
@@ -25,6 +28,22 @@ const RenderUpdateList = () => (
         name={item.name}
         test={item.test}
         testImage={item.testImage}
+      />
+    ))}
+  </>
+);
+
+const RenderPacientData = () => (
+  <>
+    {PacientsListData.list.map((item, index) => (
+      <PacientDataCard
+        key={index}
+        image={item.image}
+        canceled={item.canceled}
+        done={item.done}
+        pending={item.pending}
+        diagnostics={item.diagnostics}
+        name={item.name}
       />
     ))}
   </>
@@ -51,6 +70,7 @@ function Pacientes() {
               <Icon icon={ellipsisOutlined} color="#2C2E3D80" width="30" />
             </IconButton>
           </AllPacientsCardHeader>
+          <PacientsListContent>{RenderPacientData()}</PacientsListContent>
         </SectionCard>
       </AllPacientsSection>
     </PageContent>

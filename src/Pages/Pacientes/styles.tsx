@@ -4,6 +4,7 @@ import COLORS from "../../constants/colors";
 interface SectionCardProps {
   scroll?: boolean;
   direction: "column" | "row";
+  maxHeight?: number;
 }
 
 export const PageContent = styled.div`
@@ -47,7 +48,7 @@ export const AllPacientsSection = styled.section`
 
 export const AllPacientsCardHeader = styled.div`
   width: 100%;
-  padding: 16px 20px;
+  padding: 16px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -106,4 +107,13 @@ export const IconButton = styled.button`
     top: 0px;
     right: 20px;
   }
+`;
+
+export const PacientsListContent = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  max-height: 400px;
+  overflow-y: scroll;
 `;
