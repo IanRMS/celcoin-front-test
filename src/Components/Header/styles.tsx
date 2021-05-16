@@ -15,11 +15,7 @@ export const Container = styled.div`
   padding: 32px;
   background-color: ${COLORS.white};
   box-shadow: rgba(149, 157, 165, 0.05) 0px 8px 24px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: relative;
   border-radius: 30px 30px 0px 0px;
 
   @media (max-width: 500px) {

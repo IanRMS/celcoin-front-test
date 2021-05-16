@@ -4,10 +4,13 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background-image: url(${Background});
   padding: 40px;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: 1024px) {
     padding: 20px;

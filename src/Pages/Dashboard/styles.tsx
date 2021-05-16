@@ -5,10 +5,9 @@ import backImage from "../../assets/images/cardimage.jpg";
 export const PageContent = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 82px;
 
   @media (max-width: 500px) {
-    padding-top: 150px;
+    padding-top: 10px;
   }
 `;
 

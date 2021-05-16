@@ -4,7 +4,6 @@ import { BrowserRouter } from "react-router-dom";
 import CardContainer from "./Components/CardContainer";
 import Container from "./Components/Container";
 import Content from "./Components/Content";
-import Header from "./Components/Header";
 import SideMenu from "./Components/SideMenu";
 import SideMenuMobile from "./Components/SIdeMenuMobile";
 
@@ -26,7 +25,6 @@ function App() {
               menuClick={() => setSideMenuOpen(!isSideMenuOpen)}
             />
             <CardContainer>
-              <Header />
               <Routes />
             </CardContainer>
           </Content>
