@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Icon } from "@iconify/react";
-import searchOutlined from "@iconify-icons/ant-design/search-outlined";
 import baselineSettings from "@iconify-icons/ic/baseline-settings";
 import baselineNotifications from "@iconify-icons/ic/baseline-notifications";
 import roundApps from "@iconify-icons/ic/round-apps";
@@ -10,8 +9,6 @@ import UserImage from "../../assets/images/user.jpg";
 
 import {
   Container,
-  SearchInputContainer,
-  SearchInput,
   IconButton,
   HeaderRow,
   UserContent,
@@ -22,6 +19,7 @@ import {
   SubMenuOptionsText,
 } from "./styles";
 import COLORS from "../../constants/colors";
+import SearchInput from "../SearchInput";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,10 +45,7 @@ function Header() {
 
   return (
     <Container>
-      <SearchInputContainer>
-        <Icon icon={searchOutlined} width={20} color={COLORS.gray} />
-        <SearchInput placeholder="Busca..." />
-      </SearchInputContainer>
+      <SearchInput placeholder="Busca..." />
       <HeaderRow>
         <IconButton>
           <Icon icon={baselineSettings} width={20} color={COLORS.darkGray} />

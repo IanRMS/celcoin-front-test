@@ -15,7 +15,6 @@ export const SectionRow = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  overflow-x: scroll;
   overflow-y: visible;
 `;
 
