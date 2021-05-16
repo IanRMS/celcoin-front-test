@@ -1,10 +1,15 @@
-import React from "react";
 import GeneralInfoCard from "../../Components/GeneralInfoCard";
 import HistoricInfoCard from "../../Components/HistoricInfoCard";
+import { HistoricInfoLabel } from "../../Components/HistoricInfoCard/styles";
 import RoundButton from "../../Components/RoundButton";
 import SectionTitle from "../../Components/SectionTitle";
+import UpdatesCard from "../../Components/UpdatesCard";
+
 import GeneralInfoData from "../../data/generalInfoData";
+import historicInfoData from "../../data/historicInfoData";
 import HistoricInfoData from "../../data/historicInfoData";
+import UpdatesData from "../../data/updatesData";
+
 import {
   HistoricContainer,
   HistoricRowCard,
@@ -12,7 +17,14 @@ import {
   HistoricTitleRow,
   PageContent,
   SectionRow,
+  TopTestCard,
   TopTestContainer,
+  TopTestContent,
+  TopTestImage,
+  TopTestInfo,
+  TopTestInfoRow,
+  UpdatesRow,
+  UpdatesSection,
 } from "./styles";
 
 const RenderGeneralData = () => (
@@ -35,13 +47,28 @@ const RenderGeneralData = () => (
 
 const RenderHistoricData = () => (
   <>
-    {HistoricInfoData.map((item, index) => (
+    {HistoricInfoData.historicList.map((item, index) => (
       <HistoricInfoCard
         key={index}
         name={item.name}
         test={item.test}
         date={item.date}
         testImage={item.testImage}
+      />
+    ))}
+  </>
+);
+
+const RenderUpdatesData = () => (
+  <>
+    {UpdatesData.map((item, index) => (
+      <UpdatesCard
+        key={index}
+        date={item.date}
+        image={item.image}
+        name={item.name}
+        status={item.status}
+        test={item.test}
       />
     ))}
   </>
@@ -62,8 +89,23 @@ function Dashboard() {
         </HistoricContainer>
         <TopTestContainer>
           <SectionTitle text="Teste mais realizado" />
+          <TopTestCard>
+            <TopTestImage src={HistoricInfoData.topTest.image} />
+            <TopTestContent>
+              <TopTestInfo>{HistoricInfoData.topTest.name}</TopTestInfo>
+              <HistoricInfoLabel>LICENÇAS DISPONÍVEIS</HistoricInfoLabel>
+              <TopTestInfoRow>
+                <TopTestInfo>{historicInfoData.topTest.available}</TopTestInfo>
+                <RoundButton color="blue">COMPRAR MAIS</RoundButton>
+              </TopTestInfoRow>
+            </TopTestContent>
+          </TopTestCard>
         </TopTestContainer>
       </HistoricSection>
+      <UpdatesSection>
+        <SectionTitle text="Atualizações importantes" />
+        <UpdatesRow>{RenderUpdatesData()}</UpdatesRow>
+      </UpdatesSection>
     </PageContent>
   );
 }

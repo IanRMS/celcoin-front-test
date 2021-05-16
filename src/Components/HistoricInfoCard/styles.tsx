@@ -5,8 +5,8 @@ import COLORS from "../../constants/colors";
 export const HistoricCardContainer = styled.div`
   border-radius: 6px;
   border: 1px solid #edf1f8;
-  width: 264px;
   min-width: 264px;
+  margin-right: 16px;
 `;
 
 export const HistoricCardImageContainer = styled.div`
