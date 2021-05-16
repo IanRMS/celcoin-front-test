@@ -32,6 +32,20 @@ export const CardContent = styled.main`
   flex-direction: column;
   overflow-y: scroll;
 
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: ${COLORS.scroll};
+  }
+
   @media (max-width: 768px) {
     padding: 20px;
   }

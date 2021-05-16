@@ -34,6 +34,20 @@ export const SectionCard = styled.div<SectionCardProps>`
   overflow-x: ${(props) => (props.scroll ? "scroll" : "auto")};
   background-color: ${COLORS.white};
 
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: ${COLORS.scroll};
+  }
+
   @media (max-width: 425px) {
     padding: 8px;
   }
@@ -116,4 +130,19 @@ export const PacientsListContent = styled.div`
   margin-top: 16px;
   max-height: 400px;
   overflow-y: scroll;
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    height: 8px;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: ${COLORS.scroll};
+  }
 `;

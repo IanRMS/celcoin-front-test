@@ -2,6 +2,7 @@ const COLORS = {
   white: "#fff",
 
   lightGray: "#eff2f9",
+  scroll: "#C6C6C6",
   gray: "#787686",
   darkGray: "#2C2E3D",
 

@@ -63,6 +63,20 @@ export const HistoricRowCard = styled.div`
   flex-direction: row;
   overflow-x: scroll;
 
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: ${COLORS.scroll};
+  }
+
   &:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   }
@@ -143,4 +157,19 @@ export const UpdatesRow = styled.div`
   width: 100%;
   overflow-x: scroll;
   margin-top: 24px;
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: ${COLORS.scroll};
+    /* height: 8px; */
+  }
 `;
