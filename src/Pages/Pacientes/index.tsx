@@ -63,7 +63,9 @@ function Pacientes() {
         <SectionCard direction="column">
           <AllPacientsCardHeader>
             <div>
-              <AllPacientsListInfo>Lista de Pacientes(36)</AllPacientsListInfo>
+              <AllPacientsListInfo>
+                Lista de Pacientes({PacientsListData.amount})
+              </AllPacientsListInfo>
               <SearchInput placeholder="Buscar paciente..." />
             </div>
             <IconButton>
