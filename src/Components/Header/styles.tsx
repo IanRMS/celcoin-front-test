@@ -106,6 +106,7 @@ export const SubMenuContainer = styled.div`
   border-radius: 8px;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
   background-color: ${COLORS.white};
+  z-index: 10;
 
   button:nth-child(2) {
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -121,6 +122,8 @@ export const SubMenuOption = styled.button`
   padding-left: 10px;
   background-color: transparent;
   transition: 0.3s ease-out;
+  cursor: pointer;
+  user-select: none;
 
   svg {
     margin-right: 8px;
