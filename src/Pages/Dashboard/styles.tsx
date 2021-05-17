@@ -16,6 +16,21 @@ export const SectionRow = styled.div`
   flex-direction: row;
   width: 100%;
   overflow-y: visible;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: ${COLORS.scroll};
+  }
 `;
 
 export const HistoricSection = styled.section`
