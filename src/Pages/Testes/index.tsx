@@ -1,7 +1,7 @@
-import React from "react";
+import NotAvailable from "../../Components/NotAvailable";
 
 function Testes() {
-  return <h1>TESTES</h1>;
+  return <NotAvailable />;
 }
 
 export default Testes;

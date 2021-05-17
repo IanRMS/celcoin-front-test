@@ -37,7 +37,7 @@ export const UpdatesCardInfo = styled.div`
   font-weight: 800;
   line-height: 14px;
   letter-spacing: 0em;
-  color: #303b5b4d;
+  color: ${COLORS.info};
 `;
 
 export const UpdatesCardName = styled.h2`

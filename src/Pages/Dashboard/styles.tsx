@@ -95,7 +95,7 @@ export const TopTestContainer = styled.div`
 `;
 
 export const TopTestCard = styled.div`
-  width: 368px;
+  width: 100%;
   height: 323px;
   background-image: url(${backImage});
   background-size: cover;
@@ -104,6 +104,7 @@ export const TopTestCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: -8px;
 
   @media (max-width: 1150px) {
     width: 100%;

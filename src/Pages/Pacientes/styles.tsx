@@ -98,7 +98,7 @@ export const AllPacientsListInfo = styled.h2`
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0em;
-  color: #56546899;
+  color: ${COLORS.info2};
   margin-right: 16px;
 `;
 

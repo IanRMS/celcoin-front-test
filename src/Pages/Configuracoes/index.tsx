@@ -1,7 +1,7 @@
-import React from "react";
+import NotAvailable from "../../Components/NotAvailable";
 
 function Configurações() {
-  return <h1>CONFIGURAÇÕES</h1>;
+  return <NotAvailable />;
 }
 
 export default Configurações;

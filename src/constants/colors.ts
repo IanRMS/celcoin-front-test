@@ -10,6 +10,8 @@ const COLORS = {
   blue: "#0057FF",
   blue2: "#145AD2",
   darkBlue: "#303b5b",
+  info: "#303b5b4d",
+  info2: "#56546899",
 
   green: "#1CBF84",
 

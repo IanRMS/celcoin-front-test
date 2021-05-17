@@ -26,7 +26,7 @@ function UpdatesCard({ name, status, date, image, test }: UpdatesCardProps) {
           {status === "completed"
             ? "COMPLETOU O TESTE: "
             : "CANCELOU O TESTE: "}
-          <strong>{date}</strong>
+          <strong>{test}</strong>
         </UpdatesCardStatusInfo>
         <UpdatesCardInfo>REALIZADO EM: {date}</UpdatesCardInfo>
       </UpdatesCardInfoContent>

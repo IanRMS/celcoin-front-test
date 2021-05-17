@@ -78,7 +78,7 @@ export const PacientInfo = styled.span`
   font-weight: 800;
   line-height: 14px;
   letter-spacing: 0em;
-  color: #303b5b4d;
+  color: ${COLORS.info};
 `;
 
 export const PacientDiagnosticsInfo = styled.span`
@@ -132,6 +132,10 @@ export const DiagnosticLabel = styled.span`
   font-weight: 400;
   line-height: 21px;
   letter-spacing: 0px;
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 export const ActionsContainer = styled.div`

@@ -43,7 +43,7 @@ export const HistoricInfoLabel = styled.div`
   font-weight: 800;
   line-height: 14px;
   letter-spacing: 0em;
-  color: #303b5b4d;
+  color: ${COLORS.info};
   margin: 8px 0px;
 `;
 
