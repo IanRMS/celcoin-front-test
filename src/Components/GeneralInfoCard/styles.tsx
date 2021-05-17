@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 `;
 
 export const CardContainer = styled.div`
-  box-shadow: 0px 8px 26px 0px #47577a14;
+  box-shadow: 0px 8px 26px 0px ${COLORS.shadow};
   border-radius: 6px;
   padding: 20px;
   background-color: ${COLORS.white};

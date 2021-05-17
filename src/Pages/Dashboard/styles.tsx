@@ -70,7 +70,7 @@ export const HistoricTitleRow = styled.div`
 export const HistoricRowCard = styled.div`
   border-radius: 6px;
   background-color: ${COLORS.white};
-  box-shadow: 0px 8px 26px 0px #47577a14;
+  box-shadow: 0px 8px 26px 0px ${COLORS.shadow};
   padding: 16px;
   transition: 0.3s ease-in-out;
   margin-top: 24px;
