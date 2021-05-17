@@ -1,13 +1,7 @@
-import React, { ReactNode } from "react";
 import styled from "styled-components";
-import COLORS from "../constants/colors";
-import Header from "./Header";
+import COLORS from "../../constants/colors";
 
-interface CardContainerProps {
-  children: ReactNode;
-}
-
-const Container = styled.div`
+export const Container = styled.div`
   width: calc(100% - 250px);
   height: calc(100vh - 80px);
   background-color: ${COLORS.lightGray};
@@ -54,14 +48,3 @@ export const CardContent = styled.main`
     padding: 10px;
   }
 `;
-
-function CardContainer({ children }: CardContainerProps) {
-  return (
-    <Container>
-      <Header />
-      <CardContent>{children}</CardContent>
-    </Container>
-  );
-}
-
-export default CardContainer;

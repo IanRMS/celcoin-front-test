@@ -28,7 +28,7 @@ const RoundButtonContainer = styled.button<RoundButtonProps>`
       : "linear-gradient(93.05deg, #FF00C7 0%, #FF005C 100%);"};
 `;
 
-function RoundButton({ children, color, ...rest }: RoundButtonProps) {
+function RoundButton({ children, color }: RoundButtonProps) {
   return <RoundButtonContainer color={color}>{children}</RoundButtonContainer>;
 }
 
