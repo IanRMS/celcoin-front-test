@@ -105,6 +105,11 @@ export const TopTestCard = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: -8px;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 0px 26px 0px rgba(239, 12, 53, 0.15);
+  }
 
   @media (max-width: 1150px) {
     width: 100%;
