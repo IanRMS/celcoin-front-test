@@ -1,3 +1,5 @@
+import CountUp from "react-countup";
+
 import {
   CardContainer,
   CardIcon,
@@ -35,7 +37,9 @@ function GeneralInfoCard({
     <Wrapper>
       <CardContainer>
         <CardIcon icon={icon} color={iconColor} width="26" />
-        <CardNumber>{number}</CardNumber>
+        <CardNumber>
+          <CountUp start={0} end={number} duration={3} />
+        </CardNumber>
         <CardLabel>{label}</CardLabel>
         <CardResult result={result}>
           {result > 0 && "+ "}

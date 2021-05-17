@@ -1,3 +1,5 @@
+import CountUp from "react-countup";
+
 import GeneralInfoCard from "../../Components/GeneralInfoCard";
 import HistoricInfoCard from "../../Components/HistoricInfoCard";
 import { HistoricInfoLabel } from "../../Components/HistoricInfoCard/styles";
@@ -95,7 +97,13 @@ function Dashboard() {
               <TopTestInfo>{HistoricInfoData.topTest.name}</TopTestInfo>
               <HistoricInfoLabel>LICENÇAS DISPONÍVEIS</HistoricInfoLabel>
               <TopTestInfoRow>
-                <TopTestInfo>{historicInfoData.topTest.available}</TopTestInfo>
+                <TopTestInfo>
+                  <CountUp
+                    start={0}
+                    end={historicInfoData.topTest.available}
+                    duration={3}
+                  />
+                </TopTestInfo>
                 <RoundButton color="blue">COMPRAR MAIS</RoundButton>
               </TopTestInfoRow>
             </TopTestContent>
